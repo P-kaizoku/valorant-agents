@@ -4,20 +4,20 @@ import { useState, useEffect } from "react";
 const PlayerCard = ({ data }) => {
   return (
     <div className="wrapper  w-full h-full flex justify-center items-center">
-      <div className="card w-[300px] h-full bg-neutral-600 p-6 rounded-2xl drop-shadow-2xl text-white font-mono">
-        <div className="card-image m-4 border-2 border-neutral-800 rounded-full overflow-hidden shadow-amber-200 shadow-2xl  bg-neutral-200 ">
+      <div className="card w-[300px] h-full  p-6 rounded-xl drop-shadow-2xl  font-mono border-dashed border-2 border-black text-neutral-500">
+        <div className="card-image m-4 border-2 border-neutral-800 rounded-full  overflow-hidden   bg-white ">
           <img
-            className=" drop-shadow-2xl"
+            className=" hover:scale-110 transition-all duration-500 "
             src={data.displayIcon}
             alt={data.displayName}
           />
         </div>
         <div className="card-content">
-          <h1 className="text-3xl font-bold  border-b uppercase mb-4">
+          <h1 className="text-3xl font-bold  border-b uppercase cursor-default mb-4 hover:text-red-400 transition-all duration-500">
             {data.displayName}
           </h1>
-          <div className="px-2 py-1 border-dashed border-2 rounded-md border-amber-200 mb-4">
-            <p className="text-red-400 font-semibold text-xl">
+          <div className="px-2  py-1 border-dashed border-2 rounded-md border-neutral-400 mb-4">
+            <p className="text-red-400 font-semibold text-xl ">
               {data.role.displayName}
             </p>
             <p>{data.role.description}</p>
@@ -29,7 +29,7 @@ const PlayerCard = ({ data }) => {
             {data.abilities.map((ability, index) => (
               <div
                 key={index}
-                className="ability border-dashed border-2 border-amber-200 p-2 rounded-lg"
+                className="ability border-dashed border-2 bg-neutral-400 border-amber-200 p-2 rounded-lg"
               >
                 <h3>
                   <img width="48px" src={ability.displayIcon} alt="" />
@@ -86,7 +86,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app bg-neutral-400 scroll-smooth">
+    <div className="app  scroll-smooth">
       <h1 className="bg-red-500 h-14 font-bold uppercase text-center py-4 text-2xl">
         Valorant Agents
       </h1>
