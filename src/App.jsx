@@ -90,7 +90,7 @@ const App = () => {
       <h1 className="bg-red-500 h-14 font-bold uppercase text-center py-4 text-2xl">
         Valorant Agents
       </h1>
-      <p className="bg-amber-100 h-8 text-center text-emerald-600">Showcasing all the playable agents in valorant :)</p>
+      <p className="bg-amber-100 h-8 text-center text-sm pt-1 text-emerald-600">Showcasing all the playable agents in valorant :)</p>
       {isLoading && (
         <p className="text-xl flex justify-center items-center bg-neutral-800 text-white h-screen w-screen">
           Loading...
